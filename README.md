@@ -17,6 +17,7 @@ npm i -g @subsquid/cli
 
 # 1. Clone repository
 git clone https://github.com/0xNomind/snapshot-squid.git
+cd snapshot-squid
 
 # 2. Install dependencies
 npm ci
