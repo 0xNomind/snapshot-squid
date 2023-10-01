@@ -17,18 +17,22 @@ npm i -g @subsquid/cli
 
 # 1. Clone repository
 git clone https://github.com/0xNomind/snapshot-squid.git
+
+# 2. Go to folder
 cd snapshot-squid
 
-# 2. Install dependencies
+# 3. Rename .env.example to .env
+
+# 3. Install dependencies
 npm ci
 
-# 3. Start a Postgres database container and detach
+# 4. Start a Postgres database container and detach
 sqd up
 
-# 4. Build and start the processor
+# 5. Build and start the processor
 sqd process
 
-# 5. The command above will block the terminal
+# 6. The command above will block the terminal
 #    being busy with fetching the chain data, 
 #    transforming and storing it in the target database.
 #
