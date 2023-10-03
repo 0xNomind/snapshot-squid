@@ -23,16 +23,19 @@ cd snapshot-squid
 
 # 3. Rename .env.example to .env
 
-# 3. Install dependencies
+# 4. Install dependencies
 npm ci
 
-# 4. Start a Postgres database container and detach
+# 5. Start a Postgres database container and detach
 sqd up
 
-# 5. Build and start the processor
+# 6. Migrate database
+sqd migration:generate
+
+# 7. Build and start the processor
 sqd process
 
-# 6. The command above will block the terminal
+# 8. The command above will block the terminal
 #    being busy with fetching the chain data, 
 #    transforming and storing it in the target database.
 #
@@ -80,4 +83,3 @@ query MyQuery {
 ```
 #### Output
 ![Screenshot from 2023-10-02 00-46-42](https://github.com/0xNomind/snapshot-squid/assets/140236074/5c3a4505-de51-4041-b504-56743b792dcf)
-
