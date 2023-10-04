@@ -55,7 +55,7 @@ query MyQuery {
     space
     delegate
   }
-  blocks(limit: 5) {
+  blockEntities(limit: 5) {
     id
     number
     timestamp

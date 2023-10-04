@@ -44,7 +44,7 @@ export const processor = new EvmBatchProcessor()
     },
   })
   .setBlockRange({
-    from: 11225329,
+    from: 11_000_000,
   })
   .addLog({
     address: [CONTRACT_ADDRESS_DELEGATE],
@@ -54,11 +54,6 @@ export const processor = new EvmBatchProcessor()
     ],
   })
   .addLog({
-    address: [
-      CONTRACT_ADDRESS_GNOSIS_SAFE_V1_0_0,
-      CONTRACT_ADDRESS_GNOSIS_SAFE_V1_1_1,
-      CONTRACT_ADDRESS_GNOSIS_SAFE_V1_3_0,
-    ],
     topic0: [GnosisSafe.events.SignMsg.topic],
   })
   .addLog({

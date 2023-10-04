@@ -1,3 +1,3 @@
 export * from "./delegation.model"
-export * from "./block.model"
+export * from "./blockEntity.model"
 export * from "./sig.model"
