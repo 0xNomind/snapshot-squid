@@ -108,8 +108,8 @@ processor.run(new TypeormDatabase({ supportHotBlocks: true }), async (ctx) => {
           id = delegator.concat("-").concat(space).concat("-").concat(delegate);
           // check id is exist
           let isExistOnDB = await ctx.store.get(Delegation, id);
-          let isExistOnMap = delegations.get(id);
-          if (isExistOnDB || isExistOnMap) {
+          // let isExistOnMap = delegations.get(id);
+          if (isExistOnDB) {
             clearDelegations.set(id, id);
             ctx.log.info(
               `ClearDelegate: [id: ${id}, delegator: ${delegator}, space: ${space}, delegate: ${delegate}]`
